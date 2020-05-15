@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.kuang.pojo.Address">
+        <property name="address" value="合肥"/>
+    </bean>
+
+    <bean id="student" class="com.kuang.pojo.Student">
+        <!--基本数据类型值注入，value-->
+        <property name="name" value="文涛"/>
+
+        <!--类对象注入，ref-->
+        <property name="address" ref="address"/>
+
+        <!--数组注入，array-->
+        <property name="books">
+            <array>
+                <value>西游记</value>
+                <value>红楼梦</value>
+                <value>水浒传</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+
+        <!--List注入，list-->
+        <property name="hobbys">
+            <list>
+                <value>打游戏</value>
+                <value>读书</value>
+                <value>看电影</value>
+            </list>
+        </property>
+
+        <!--Map注入，map-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="1231243154543562343"/>
+                <entry key="银行卡" value="2354364576756753233"/>
+            </map>
+        </property>
+
+        <!--Set注入，set-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>Dota</value>
+                <value>CSGO</value>
+            </set>
+        </property>
+
+        <!--null注入，null-->
+        <property name="wife">
+            <null/>
+        </property>
+
+        <!--Properties注入，props-->
+        <property name="info">
+            <props>
+                <prop key="学号">151204124</prop>
+                <prop key="性别">男</prop>
+                <prop key="姓名">涛</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

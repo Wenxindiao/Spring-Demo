@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--configuration核心配置文件-->
+<configuration>
+
+    <!--  给当前包起别名  只要指定包名即可，之后程序会为包下的所有类都自动加上别名，其定义别名的规范就是对应包装类的类名首字母变为小写！-->
+    <typeAliases>
+        <package name="com.kuang.pojo"/>
+    </typeAliases>
+
+
+</configuration>
